@@ -75,7 +75,7 @@ $(function () {
 
         if (res.success) {
           console.log('123');
-          location.href = "index.html"
+          // location.href = "index.html"
         }
 
       }
