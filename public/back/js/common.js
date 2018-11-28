@@ -10,6 +10,7 @@
 //  .ajaxStart()   在第一个ajax请求开始时调用
 //  .ajaxStop()    在所有的ajax请求都完成时调用
 $(document).ajaxStart(function () {
+
   NProgress.start()
 })
 
@@ -18,4 +19,11 @@ $(document).ajaxStop(function () {
   setTimeout(function () {
     NProgress.done()
   }, 500)
+})
+
+// 公共的功能：
+// 1，左侧二级菜单切换
+$(".category").on('click', function () {
+  $(this).next().stop().slideToggle();
+  //  next():下一个兄弟元素
 })

@@ -6,10 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/commom.css">
 </head>
 
 <body>
-  <div>后台管理系统</div>
+
+  <div class="lt_aside">
+    <div class="brand">
+      <h3>黑马31期</h3>
+    </div>
+    <div class="user">
+      <img src="./images/02.jpg" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#" class="active"><i class="glyphicon glyphicon-user "></i><span>用户管理</span></a></li>
+        <li><a href="#" class="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
+          <div class="child">
+            <a href="#">一级分类</a>
+            <a href="#">二级分类</a>
+          </div>
+        </li>
+        <li><a href="#"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="lt_main">
+    <div class="lt_topbar">
+      <a href="#" class="pull-left"><i class="glyphicon glyphicon-align-justify"></i></a>
+      <a href="#" class="pull-right"><i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+    <div class="lt_container"></div>
+  </div>
+
+  <script src="./lib/jquery/jquery.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
