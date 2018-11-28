@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <!-- 侧边栏 -->
   <div class="lt_aside">
     <div class="brand">
       <h3>黑马31期</h3>
@@ -33,12 +33,21 @@
       </ul>
     </div>
   </div>
+  <!-- 主体 -->
   <div class="lt_main">
+    <!-- 头部 -->
     <div class="lt_topbar">
-      <a href="#" class="pull-left"><i class="glyphicon glyphicon-align-justify"></i></a>
-      <a href="#" class="pull-right"><i class="glyphicon glyphicon-log-out"></i></a>
+      <a href="#" class="pull-left icon_left"><i class="glyphicon glyphicon-align-justify"></i></a>
+      <a href="#" class="pull-right icon_right"><i class="glyphicon glyphicon-log-out"></i></a>
     </div>
-    <div class="lt_container"></div>
+    <!-- 内容 -->
+    <!-- 底下一个流式布局容器 container-fluid  特点: 默认宽度100%, 有左右的15px padding -->
+    <div class="container-fluid">
+      <ol class="breadcrumb">
+        <li><a href="index.html">管理系统</a></li>
+        <li class="active">首页</li>
+      </ol>
+    </div>
   </div>
 
   <script src="./lib/jquery/jquery.js"></script>

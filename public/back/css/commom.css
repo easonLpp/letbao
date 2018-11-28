@@ -41,6 +41,13 @@ a:active {
   height: 100%;
   background-color: #222D32;
   z-index: 999;
+  transition: all 1s
+}
+
+/* 切换侧边栏 */
+
+.lt_aside.hidemenu {
+  left: -180px;
 }
 
 .lt_aside .brand {
@@ -112,6 +119,11 @@ a:active {
   background-color: #3C8DBC;
   line-height: 50px;
   padding-left: 180px;
+  transition: all 1s
+}
+
+.lt_topbar.hidemenu {
+  padding-left: 0;
 }
 
 .lt_topbar a {
@@ -120,4 +132,20 @@ a:active {
   color: #fff;
   font-size: 20px;
   text-align: center;
+}
+
+.lt_main {
+  height: 2000px;
+  background-color: darkkhaki;
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: all 1s
+}
+
+.lt_main .breadcrumb {
+  margin-top: 20px;
+}
+
+.lt_main.hidemenu {
+  padding-left: 0;
 }

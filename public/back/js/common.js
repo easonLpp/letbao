@@ -22,8 +22,20 @@ $(document).ajaxStop(function () {
 })
 
 // 公共的功能：
-// 1，左侧二级菜单切换
-$(".category").on('click', function () {
-  $(this).next().stop().slideToggle();
-  //  next():下一个兄弟元素
+$(function () {
+  // 1，左侧二级菜单切换
+  $(".category").on('click', function () {
+    $(this).next().stop().slideToggle();
+    //  next():下一个兄弟元素
+  })
+  // 2,公共左侧菜单切换
+  $('.icon_left').click(function () {
+    // $('.lt_aside').slideToggle();
+    // $('.lt_aside').animate({
+    //   width: 0
+    // }, 2000);
+    $('.lt_aside').toggleClass('hidemenu')
+    $('.lt_main').toggleClass('hidemenu')
+    $('.lt_topbar').toggleClass('hidemenu')
+  })
 })
