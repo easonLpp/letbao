@@ -38,4 +38,29 @@ $(function () {
     $('.lt_main').toggleClass('hidemenu')
     $('.lt_topbar').toggleClass('hidemenu')
   })
+
+  // 3. 退出功能
+  // (1) 点击右侧按钮, 显示模态框
+  $('.icon_right').click(function () {
+    // 退出模态框
+    $('.icon_right').click(function () {
+      $('#logoutModal').modal('show')
+    })
+  })
+  // (2) 点击退出模态框的退出按钮, 完成退出功能
+  $('#logoutBtn').click(function () {
+    //发送ajax请求，销毁当前登陆状态
+    $.ajax({
+      url: '/employee/employeeLogout',
+      type: 'get',
+      dataType: 'json',
+      success: function (info) {
+        if (info.success) {
+          location.href = 'login.html';
+        }
+      }
+
+    })
+  })
+
 })
