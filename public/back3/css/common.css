@@ -2,6 +2,22 @@
   background-color: #222D32;
 }
 
+ul,
+li,
+ol,
+h3 {
+  padding: 0;
+  margin: 0;
+  list-style: none
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none
+}
+
 .mt_150 {
   margin-top: 150px;
 }
@@ -11,4 +27,78 @@
   line-height: 40px;
   font-size: 20px;
   text-align: center;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+/* 首页侧边栏 */
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+}
+
+.lt_aside .title {
+  width: 180px;
+  height: 50px;
+}
+
+.lt_aside .title h3 {
+  color: azure;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: #367FA9;
+}
+
+.lt_aside .user {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.lt_aside .user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.lt_aside .user p {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.lt_aside .nav {
+  margin-top: 40px;
+}
+
+.lt_aside .nav a {
+  color: #fff;
+  padding-left: 50px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+
+}
+
+.lt_aside .nav span {
+  margin-left: 5px
+}
+
+.lt_aside .nav li .child {
+  padding-left: 15px;
+  display: none
+}
+
+.lt_aside .nav li {
+  border-left: 3px solid transparent;
+
+}
+
+.lt_aside .nav .active {
+  background-color: #000;
+  border-left: 3px solid #367FA9;
 }
