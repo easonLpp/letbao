@@ -1,0 +1,50 @@
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+
+input[type=search] {
+  text-align: left;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #007AFF;
+  margin-bottom: 0;
+}
+
+.lt_search button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 6px 6px 0;
+
+}
+
+.lt_history {
+  padding: 10px;
+}
+
+.lt_history .title {
+  font-size: 12px
+}
+
+.lt_history .content ul {
+  border: 1px dashed red;
+}
+
+.lt_history .content ul li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed red
+}
+
+.lt_history .content ul li:last-child {
+  border-bottom: none
+}
+
+.lt_history .content ul li a {
+  padding: 0 10px;
+}
+
+.lt_history .content ul li i {
+  line-height: 30px;
+}

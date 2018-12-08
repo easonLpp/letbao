@@ -82,17 +82,20 @@ $(function () {
       picArr.unshift(picObj)
       var picUrl = picObj.picAddr
       // 将每次上传完成的图片, 显示在结构最前面
-      $("#imgBox img").prepend('  <img src="' + picUrl + '" style="width: 100px">')
+      $("#imgBox").prepend('  <img src="' + picUrl + '" style="width: 100px">')
       // 如果长度超过 3, 需要将最后一个移除
       if (picArr.length > 3) {
         picArr.pop(); //删除数组中最后一项        
         // $('#imgBox img:last-of-type')   找最后一个图片类型的子元素  (只关注类型)
         $("#imgBox img:last-of-type").remove()
-        // 如果文件上传满了 3张, 当前picStatus的校验状态, 更新成 VALID
-        if (picArr.length === 3) {
-          $("#form").data('bootstrapValidator').updateStatus("picStatus", "VALID")
-        }
+
       }
+      // 如果文件上传满了 3张, 当前picStatus的校验状态, 更新成 VALID
+
+      if (picArr.length === 3) {
+        $("#form").data('bootstrapValidator').updateStatus("picStatus", "VALID")
+      }
+
     }
   });
 
@@ -183,37 +186,42 @@ $(function () {
     }
 
   })
+
   // 6. 注册一个表单校验成功事件, 阻止默认的提交, 通过ajax提交
-  var paramsStr = $("#form").serialize()
-
-  // 还需要拼接上图片数据
-  // key=value&key1=value1&key2=value2;
-
-  // 多个参数之间, 通过 & 分隔, 每个键值对, 通过 = 分开
-  // paramsStr += "&picName1=xx&picAddr1=xx";
-  paramsStr += "&picName1=" + picArr[0].picName + "&picAddr1=" + picArr[0].picAddr
-  paramsStr += "&picName2=" + picArr[1].picName + "&picAddr2=" + picArr[1].picAddr
-  paramsStr += "&picName3=" + picArr[2].picName + "&picAddr3=" + picArr[2].picAddr
-
-  // brandId = 1 & num = 2 &
-  // picAddr1 = xx & picName1 = xx &
-  // picAddr2 = xx & picName2 = xx &
-  // picAddr3 = xx & picName3 = xx
   $("#form").on("success.form.bv", function (e) {
     e.preventDefault();
+    var paramsStr = $("#form").serialize()
+    // 还需要拼接上图片数据
+    // key=value&key1=value1&key2=value2;
+    console.log(picArr);
+    // 多个参数之间, 通过 & 分隔, 每个键值对, 通过 = 分开
+    // paramsStr += "&picName1=xx&picAddr1=xx";
+    // paramsStr += "&picName1=" + picArr[0].picName + "&picAddr1=" + picArr[0].picAddr
+
+    paramsStr += "&picName1=" + picArr[0].picName + "&picAddr1=" + picArr[0].picAddr
+    paramsStr += "&picName2=" + picArr[1].picName + "&picAddr2=" + picArr[1].picAddr
+    paramsStr += "&picName3=" + picArr[2].picName + "&picAddr3=" + picArr[2].picAddr
+
+    // brandId = 1 & num = 2 &
+    // picAddr1 = xx & picName1 = xx &
+    // picAddr2 = xx & picName2 = xx &
+    // picAddr3 = xx & picName3 = xx
+
+
     $.ajax({
       type: 'post',
       url: '/product/addProduct',
       dataType: 'json',
       data: paramsStr,
       success: function (info) {
+        console.log('成功');
         if (info.success) {
           $("#addPro").modal("hide")
           currentPage = 1;
           render();
 
           // 重置
-          $("#form").data("bootstrapValidator").reserForm(true)
+          $("#form").data("bootstrapValidator").resetForm(true)
           // 按钮文本和图片需要手动重置
           $("#choseSec").text("请选择二级分类")
           $("#imgBox img").remove();

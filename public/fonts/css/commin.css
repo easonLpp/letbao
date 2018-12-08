@@ -1,0 +1,133 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none
+}
+
+.lt_container {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  /* background-color: cadetblue; */
+  background-color: #fff;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.header {
+  height: 45px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #006699;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.header .icon_left,
+.header .icon_right {
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  /* background-color: violet; */
+}
+
+.header .icon_left {
+  left: 0;
+}
+
+.header .icon_right {
+  right: 0;
+}
+
+.header h3 {
+  height: 45px;
+  line-height: 45px;
+  font-size: 22px;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+  color: #fff
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #006699;
+}
+
+.footer ul {
+  overflow: hidden;
+}
+
+.footer li {
+  width: 25%;
+  float: left;
+  height: 50px;
+  /* line-height: 50px; */
+  text-align: center;
+}
+
+.footer li a {
+  margin-top: 6px;
+  display: block;
+  height: 50px;
+  color: #fff
+}
+
+.footer li p {
+  color: #fff
+}
+
+.footer li a.current,
+.footer li a.current p {
+  color: chocolate
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* 轮播图的小圆点 */
+.mui-slider-indicator {
+  margin-bottom: 20px;
+}
+
+.mui-slider-indicator .mui-indicator {
+  width: 10px;
+  height: 10px;
+}
+
+/* 轮播图照片 */
+.mui-slider .mui-slider-group .mui-slider-item img {
+  height: 360px;
+}
